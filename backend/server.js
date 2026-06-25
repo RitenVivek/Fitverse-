@@ -11,7 +11,12 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors({ 
+  origin: function(origin, callback) {
+    return callback(null, true);
+  }, 
+  credentials: true 
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === 'development') {
@@ -35,9 +40,13 @@ app.get('/api/health', (req, res) => {
 // Error handler
 app.use(errorHandler);
 
-// Start server
+// Start server when executed directly
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 FitVerse API running on port ${PORT}`);
-  console.log(`📋 Health: http://localhost:${PORT}/api/health`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 FitVerse API running on port ${PORT}`);
+    console.log(`📋 Health: http://localhost:${PORT}/api/health`);
+  });
+}
+
+module.exports = app;

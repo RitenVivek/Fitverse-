@@ -159,7 +159,58 @@ Navigate to `http://localhost:3000`
 
 ---
 
-## 🔌 API Reference
+## � Deployment Guide
+
+### Backend deployment
+- Use a hosted MongoDB instance such as MongoDB Atlas and set `MONGODB_URI` accordingly.
+- Set production environment variables in your host:
+  - `PORT`
+  - `MONGODB_URI`
+  - `JWT_SECRET`
+  - `JWT_EXPIRES_IN=7d`
+  - `NODE_ENV=production`
+- Install backend dependencies and start with `npm start`.
+- If you deploy to Heroku, Render, Railway, or Fly, use the `backend` folder as your service root.
+- If Python is available, the ML endpoints will run with `scikit-learn`; otherwise the built-in JavaScript fallbacks still work.
+
+### Frontend deployment
+- Build the frontend with `npm run build` in `frontend`.
+- Host the generated `dist/` folder on Vercel, Netlify, or any static site host.
+- Ensure your frontend uses the correct API base URL for production (for example, set `VITE_API_BASE_URL` if adding one).
+- You can also serve the built frontend from Express by adding static middleware in the backend.
+
+---
+
+## 🧪 Testing Guide
+
+### Backend tests
+- Install backend test packages:
+```bash
+cd backend
+npm install
+```
+- Run tests with:
+```bash
+npm test
+```
+- This repository includes a simple health check test for the backend server.
+
+### Frontend tests
+- Install frontend dev packages:
+```bash
+cd frontend
+npm install
+```
+- Run tests with:
+```bash
+npm test
+```
+- Run in watch mode with:
+```bash
+npm run test:watch
+```
+
+## �🔌 API Reference
 
 ### Auth
 | Method | Endpoint | Description |
