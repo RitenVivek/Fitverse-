@@ -6,6 +6,9 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGODB_URI);
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
+    console.error("❌ MongoDB Atlas Error:");
+    console.error(error);
+    
     console.warn(`⚠️  Could not connect to MongoDB at ${process.env.MONGODB_URI}`);
     console.log('🔄 Starting in-memory MongoDB server...');
 
