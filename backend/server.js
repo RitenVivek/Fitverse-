@@ -4,6 +4,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
+const path = require('path'); 
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -46,7 +47,7 @@ app.use(
 app.use(limiter);
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://localhost:5173'
+  'http://localhost:5173',
 ];
 app.use(cors({ 
   origin:(origin, callback) => {
@@ -83,6 +84,15 @@ app.get('/api/health', (req, res) => {
 
 // Error handler
 app.use(errorHandler);
+
+//Serve frontend in production
+if (process.env.NODE_ENV === 'production') {
+  const frontendPath = path.join(__dirname, '../frontend/dist');
+  app.use(express.static(frontendPath));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'index.html'));
+  });
+}
 
 // Start server when executed directly
 const PORT = process.env.PORT || 5000;
