@@ -2,7 +2,7 @@
 # Stage 1 - Build React App
 # ===========================
 
-FROM node:22-slim AS frontend-builder
+FROM node:22.21.0-slim AS frontend-builder
 
 WORKDIR /app/frontend
 
@@ -19,7 +19,7 @@ RUN npm run build
 # Stage 2 - Production Server
 # ===========================
 
-FROM node:22-slim
+FROM node:22.21.0-slim
 
 # Install Python
 RUN apt-get update && \
