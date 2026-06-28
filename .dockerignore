@@ -1,0 +1,44 @@
+# Git
+.git 
+.github
+.gitignore
+
+# Enviroment
+.env 
+.env.*
+
+# Node 
+**/node_modules
+npm-debug.log
+yarn-error.log
+
+# React build
+frontend/dist
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea 
+
+# Test
+coverage
+
+# Documentation
+*.md
+
+# Build outputs
+dist
+build
+**/dist
+**/build
+
+# Logs
+*.log
