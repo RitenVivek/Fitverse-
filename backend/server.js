@@ -48,6 +48,7 @@ app.use(limiter);
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
+  'https://fitverse-mnki.onrender.com',
 ];
 app.use(cors({ 
   origin:(origin, callback) => {
@@ -82,9 +83,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Error handler
-app.use(errorHandler);
-
 //Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
   const frontendPath = path.join(__dirname, '../frontend/dist');
@@ -93,6 +91,9 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(frontendPath, 'index.html'));
   });
 }
+
+// Error handler
+app.use(errorHandler);
 
 // Start server when executed directly
 const PORT = process.env.PORT || 5000;
