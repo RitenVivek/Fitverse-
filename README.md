@@ -13,7 +13,7 @@
 ![Version](https://img.shields.io/badge/Version-v1.0.0-success)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_FitVerse-00C853?style=for-the-badge)](https://fitverse-mnki.onrender.com)
+[![Live](https://img.shields.io/badge/🚀_Live_Demo-Visit_FitVerse-00C853?style=for-the-badge)](https://fitverse-mnki.onrender.com)
 
 > **AI-Powered Full-Stack Fitness Tracking & Wellness Platform**
 
