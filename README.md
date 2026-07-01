@@ -1,10 +1,15 @@
 # 🏋️ FitVerse
 
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-22-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-4-black?logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
+![Python](https://img.shields.io/badge/Python-3.12-yellow?logo=python)
+![License](https://img.shields.io/badge/License-Proprietary-red.svg)
+![Version](https://img.shields.io/badge/Version-v1.0.0-success)
+
 > **AI-Powered Full-Stack Fitness Tracking & Wellness Platform**
-
-FitVerse is a production-ready full-stack fitness tracking application built using the MERN Stack with Dockerized deployment, MongoDB Atlas, GitHub Actions CI/CD, and Python-based Machine Learning support.
-
----
 
 ## 🌐 Live Demo
 
@@ -196,21 +201,27 @@ npm install
 
 ---
 
-## Environment Variables
+## 🔐 Environment Variables
 
-Create a `.env` file inside the backend directory.
+FitVerse uses environment variables for configuration.
+An example configuration file is already included:
 
-```env
-PORT=5000
-
-NODE_ENV=development
-
-MONGODB_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_secret_key
-
-JWT_EXPIRES_IN=7d
+```text
+backend/.env.example
 ```
+
+Copy it to create your local environment file:
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+Then replace the placeholder values in `.env` with your own:
+* MongoDB Atlas connection string
+* JWT secret
+* Any other required credentials
+
+> **Note:** Never commit your actual `.env` file to GitHub. Only commit `.env.example`.
 
 ---
 
@@ -294,13 +305,18 @@ v1.0.0
 
 ---
 
+## 📄 License
+
+This project is proprietary software.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
 # 👨‍💻 Developer
 
 **Riten Vivek**
-
-GitHub
-
-https://github.com/RitenVivek
+GitHub: https://github.com/RitenVivek
 
 ---
 
