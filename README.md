@@ -4,10 +4,16 @@
 ![Node.js](https://img.shields.io/badge/Node.js-22-green?logo=node.js)
 ![Express](https://img.shields.io/badge/Express.js-4-black?logo=express)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
-![Docker](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
 ![Python](https://img.shields.io/badge/Python-3.12-yellow?logo=python)
-![License](https://img.shields.io/badge/License-Proprietary-red.svg)
+![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-013243?logo=numpy)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?logo=scikitlearn)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=githubactions)
+![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?logo=render)
 ![Version](https://img.shields.io/badge/Version-v1.0.0-success)
+![License](https://img.shields.io/badge/License-Proprietary-red)
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_FitVerse-00C853?style=for-the-badge)](https://fitverse-mnki.onrender.com)
 
 > **AI-Powered Full-Stack Fitness Tracking & Wellness Platform**
 
